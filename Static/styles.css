@@ -1,0 +1,141 @@
+@font-face {
+    font-family:"din-condensed";
+    src: url("../Assets/fonts/DIN Condensed Bold.ttf");
+}
+@font-face {
+    font-family:"Poppins";
+    src: url("../Assets/fonts/Poppins-Regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #FFFFFF;
+    --litle-white: rgba(255, 255, 255,0.7);
+    --black: #000;
+    --outfit: "Outfit", sans-serif;
+    --sky-blue: #02B9D8;
+}
+
+/*            CONTAINERS
+------------------------------------- */
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 1178px;
+    height: 588px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*       CARD IMAGE BACKGROUND
+-----------------------------------*/
+.container .gallery-section{
+    position: relative;
+}
+.container .gallery-section .overlay,
+.container .gallery-section .image,
+.container .gallery-section .image img,
+.container .gallery-section{
+    width: 293px;
+    height: 588px;
+    margin-right: 2px;
+}
+.container .gallery-section .overlay:last-child,
+.container .gallery-section .image:last-child,
+.container .gallery-section:last-child{
+    margin-right: 0px;
+}
+.container .gallery-section .image{
+    position: absolute;
+    overflow: hidden;
+    z-index:10;
+}
+.container .gallery-section .image img{
+    object-fit: cover;
+    transition:ease-out 300ms;
+    width: 100%;
+}
+
+/*         CARD IMAGE OVERLAY
+------------------------------------ */
+.container .gallery-section .overlay{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+    position: absolute;
+    z-index:20;
+}
+.container .gallery-section .overlay .info {
+    width: 213px;
+    position: absolute;
+    margin:0 40px;
+    bottom: 40px;
+}
+.container .gallery-section .overlay .info h2{
+    color: var(--white);
+    font-family: "din-condensed",sans-serif;
+    text-transform: uppercase;
+    font-size: 38px;
+    line-height: 38px;
+    font-weight:700;
+}
+.container .gallery-section .overlay .info p{
+    color: var(--litle-white);
+    font-family: "Poppins",sans-serif;
+    font-size: 12px;
+    margin-top:8px;
+    line-height: 16.02px;
+    font-weight:400;
+}
+.container .gallery-section .overlay .more{
+    transition: ease-out 300ms;
+    display: flex;
+    align-items: center;
+    height:0px;
+    margin-top:0px !important;
+    overflow: hidden;
+ }
+ .container .gallery-section .overlay .more span{
+     font-family: "Poppins", sans-serif;
+     font-size: 14px;
+     color: var(--sky-blue);
+ }
+.hover_enter{      /* make image black and white when overlay is hovered! */
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%) blur(5px);
+    transform: scale(1.1);
+    opacity:0.5;
+}
+.container .gallery-section .overlay:hover .info .more{    /* make 'Know more' appear when overlay is hovered! */
+  height:30px;  /* Height is from 0px to 30px */
+}
+
+/*             MOBILE RESPONSIVENESS 
+----------------------------------------------------------------*/
+@media (max-width: 720px) {
+    .container {
+        width: 400px;
+        height: 600px;
+    }
+    .container .gallery-section .overlay,
+    .container .gallery-section .image,
+    .container .gallery-section .image img,
+    .container .gallery-section{
+        width: 98.5px;
+        height: 600px;
+    }
+    .container .gallery-section .overlay .info {
+        display: none;
+    }
+}
