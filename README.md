@@ -51,12 +51,12 @@ node stringTransform.js
 
 ## Screenshots
 
-![Landing Page](https://github.com/lewentours/LewenTours/blob/main/frontend/public/images/LandingPage.png)
+![Desktop View](https://github.com/saveur1/CodeOfAfricaGallery/blob/main/Assets/images/screenshoot1.png)
 
-![Destinations](https://github.com/lewentours/LewenTours/blob/main/frontend/public/images/Destinations.png)
+![Hovered Desktop View](https://github.com/saveur1/CodeOfAfricaGallery/blob/main/Assets/images/screenshoot2.png)
 
+![Mobile View](https://github.com/saveur1/CodeOfAfricaGallery/blob/main/Assets/images/screenshoot3.png)
 
 ## Author
 
 - [@Bikorimana Saveur](https://www.github.com/saveur1)
-
